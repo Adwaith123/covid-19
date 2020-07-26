@@ -1,0 +1,60 @@
+.nav {
+	display: flex;
+	flex-direction: row;
+	font-family: 'Share Tech Mono', monospace;
+	border-radius: 1em;
+	padding: 0.5em;
+}
+
+.overall-count {
+	padding: 0.5em;
+	border-radius: 1em;
+	background-color: #323232;
+	color: white;
+	margin: 0.3em;
+	font-size: 1.2rem;
+}
+
+#cases {
+	background-color: #fe346e;
+}
+
+#recovered {
+	background-color: #1eb2a6;
+}
+
+#active {
+	background-color: mediumpurple;
+}
+
+.num-div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.active {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.increase-stat {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.confirmed {
+	color: #fe346e;
+}
+
+.recovered {
+	color: #1eb2a6;
+}
+
+.deaths {
+	color: #323232;
+}

@@ -1,0 +1,203 @@
+.app {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+#app-title {
+	font-family: 'Share Tech Mono', monospace;
+	font-size: 0.8rem;
+	margin-top: 1.5rem;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	/* CSS SMOOTH SCROLL */
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+	scroll-snap-type: y mandatory;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 100%;
+	height: 100vh;
+
+	/* SCROLL SNAP */
+	scroll-snap-align: center;
+}
+
+.nav-container {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#logo {
+	margin-right: 1em;
+	animation-name: floating;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+	from {
+		transform: translate(0, 0px);
+	}
+	65% {
+		transform: translate(0, 15px);
+	}
+	to {
+		transform: translate(0, -0px);
+	}
+}
+
+.chart-container {
+	position: relative;
+	margin: 2rem;
+	height: 80vh;
+	width: 80vw;
+	display: flex;
+	justify-content: center;
+}
+
+.pie-chart-container {
+	margin-bottom: 1rem;
+	height: 50vh;
+}
+
+a {
+	font-size: small;
+	text-decoration: none;
+	padding: 0.5em;
+	border-radius: 5px;
+	color: white;
+	border: 1px solid black;
+	background-color: black;
+	font-family: 'Share Tech Mono', monospace;
+}
+
+a:hover {
+	background-color: white;
+	color: black;
+	cursor: pointer;
+}
+
+#data-source {
+	position: absolute;
+	top: 0.5rem;
+	right: 3rem;
+	font-size: small;
+	font-family: 'Share Tech Mono', monospace;
+}
+
+#last-updated {
+	position: absolute;
+	top: 1.5rem;
+	right: 3rem;
+	font-size: 0.6em;
+	font-family: 'Share Tech Mono', monospace;
+}
+
+#developer {
+	position: absolute;
+	top: 0.5rem;
+	left: 0.5rem;
+	font-size: 1rem;
+	text-decoration: none;
+	padding: 0.5em;
+	background-color: white;
+	color: black;
+	border: none;
+	font-style: italic;
+	font-family: 'Share Tech Mono', monospace;
+}
+
+.spinner-container {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+/* spinner css */
+.spinner {
+	width: 80px;
+	height: 80px;
+	margin: 100px auto;
+	background-color: #333;
+
+	border-radius: 100%;
+	-webkit-animation: sk-scaleout 1s infinite ease-in-out;
+	animation: sk-scaleout 1s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-scaleout {
+	0% {
+		-webkit-transform: scale(0);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		opacity: 0;
+	}
+}
+
+@keyframes sk-scaleout {
+	0% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 0;
+	}
+}
+
+/* spinner css end */
+
+.updates {
+	width: 70vw;
+	height: 70vh;
+	overflow-y: scroll;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Share Tech Mono', monospace;
+}
+
+@media only screen and (max-width: 900px) {
+	.container {
+		display: block;
+	}
+	#logo {
+		height: 50px;
+		width: auto;
+	}
+	#data-source {
+		right: 1rem;
+		font-size: 0.5rem;
+	}
+	#last-updated {
+		right: 1rem;
+		font-size: 0.4em;
+	}
+	#developer {
+		font-size: 0.5rem;
+	}
+}
+
+@media only screen and (max-width: 760px) {
+	.nav p {
+		font-size: 0.6em;
+	}
+}
